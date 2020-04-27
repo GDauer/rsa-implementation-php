@@ -1,0 +1,22 @@
+{
+  "name": "dauer/openssl-cli-implementation",
+  "minimum-stability": "dev",
+  "type": "library",
+  "description": "Modules PHP for openssl implementation with cli",
+  "homepage": "https://github.com/GDauer",
+  "authors": [
+    {
+      "name": "Gustavo Vicente Dauer",
+      "email": "gustavo.dauer@hotmail.com"
+    }
+  ],
+  "require": {
+    "php": "~7.1.3||~7.2.0||~7.3.0"
+  },
+  "version": "0.1.0",
+  "autoload": {
+    "psr-4": {
+      "": "src"
+    }
+  }
+}

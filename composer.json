@@ -1,0 +1,17 @@
+{
+    "name": "dauer/aps-security",
+    "authors": [
+        {
+            "name": "Gustavo Vicente Dauer",
+            "email": "gustavo.dauer@hotmail.com"
+        }
+    ],
+    "require": {
+        "ext-openssl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dauer\\": "app\\code\\src"
+        }
+    }
+}
