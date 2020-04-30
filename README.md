@@ -17,4 +17,4 @@ On the project root directory type:
  - make install; make run;
  
  ### Usage Example
- [![Watch the video](https://www.loom.com/share/27c2282ddaa2432c87be49d62a286f10)]
+ [Watch the video](https://www.loom.com/share/27c2282ddaa2432c87be49d62a286f10)
