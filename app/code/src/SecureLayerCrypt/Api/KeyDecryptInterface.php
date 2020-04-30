@@ -2,26 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Dauer\OpenSecureSocketsLayer\Api;
+namespace Dauer\SecureLayerCrypt\Api;
 
-use Dauer\OpenSecureSocketsLayer\Exception\CouldNotDecryptException;
+use Dauer\SecureLayerCrypt\Exception\CouldNotDecryptException;
+use Dauer\SecureLayerCrypt\Exception\InvalidKeyGenerationException;
 
 /**
  * Interface KeyDecryptInterface
  *
  * @category PHP
- * @package  Dauer\OpenSecureSocketsLayer\Api
+ * @package  Dauer\SecureLayerCrypt\Api
  * @author   Gustavo Dauer <gustavo.dauer@webjump.com.br>
  */
 interface KeyDecryptInterface
 {
-
-    /**
-     * For Keys with 4096 bits of size, the max limit length will be 4096/8 = 512
-
-     * @var string
-     */
-    public const DECRYPT_BITS_MAX_LENGTH = 512;
 
     /**
      * Return an array with Decrypted content data
@@ -31,6 +25,7 @@ interface KeyDecryptInterface
      *
      * @return array
      * @throws CouldNotDecryptException
+     * @throws InvalidKeyGenerationException
      */
     public function decryptContent(string $encrypted, string $publicKey): array;
 }

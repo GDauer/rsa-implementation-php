@@ -2,28 +2,30 @@
 
 declare(strict_types=1);
 
-namespace Dauer\OpenSecureSocketsLayer\Api;
+namespace Dauer\SecureLayerCrypt\Api;
 
-use Dauer\OpenSecureSocketsLayer\Exception\CouldNotEncryptException;
+use Dauer\SecureLayerCrypt\Exception\CouldNotEncryptException;
+use Dauer\SecureLayerCrypt\Exception\InvalidKeyGenerationException;
 
 interface KeyEncryptInterface
 {
 
     /**
-     * OpenSSL can not encrypt data bigger OR equal than it's decrypt capacity. So i'm using 2048/8 = 245
+     * Max bits per iteration
      *
      * @var string
      */
     public const ENCRYPT_BITS_MAX_SIZE = 245;
 
     /**
-     * Return array with Encrypt data content
+     * Return an array with encrypted data
      *
      * @param string $plainText
      * @param string $privateKey
      *
      * @return array
      * @throws CouldNotEncryptException
+     * @throws InvalidKeyGenerationException
      */
     public function encryptContent(string $plainText, string $privateKey): array;
 }

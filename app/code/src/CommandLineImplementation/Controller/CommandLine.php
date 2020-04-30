@@ -6,12 +6,12 @@ namespace Dauer\CommandLineImplementation\Controller;
 
 use Dauer\CommandLineImplementation\Api\CommandLineInterface;
 use Dauer\CommandLineImplementation\Helper\FileHelper;
-use Dauer\OpenSecureSocketsLayer\Exception\CouldNotDecryptException;
-use Dauer\OpenSecureSocketsLayer\Exception\CouldNotEncryptException;
-use Dauer\OpenSecureSocketsLayer\Exception\InvalidKeyGenerationException;
-use Dauer\OpenSecureSocketsLayer\Model\KeyDecrypt;
-use Dauer\OpenSecureSocketsLayer\Model\KeyEncrypt;
-use Dauer\OpenSecureSocketsLayer\Model\KeyGeneration;
+use Dauer\SecureLayerCrypt\Exception\CouldNotDecryptException;
+use Dauer\SecureLayerCrypt\Exception\CouldNotEncryptException;
+use Dauer\SecureLayerCrypt\Exception\InvalidKeyGenerationException;
+use Dauer\SecureLayerCrypt\Model\KeyDecrypt;
+use Dauer\SecureLayerCrypt\Model\KeyEncrypt;
+use Dauer\SecureLayerCrypt\Model\KeyGeneration;
 
 /**
  * Class CommandLine
@@ -38,9 +38,9 @@ class CommandLine implements CommandLineInterface
     /**
      * CommandLine constructor.
      *
-     * @param KeyGeneration $keyGeneration OpenSSL Key generation
-     * @param KeyEncrypt    $keyEncrypt    OpenSSL Key Encrypt model
-     * @param KeyDecrypt    $keyDecrypt    OpenSSL Key Decrypt model
+     * @param KeyGeneration $keyGeneration Key generation
+     * @param KeyEncrypt    $keyEncrypt    Key Encrypt model
+     * @param KeyDecrypt    $keyDecrypt    Key Decrypt model
      * @param FileHelper    $fileHelper    File Content Helper
      */
     public function __construct(
@@ -209,7 +209,9 @@ class CommandLine implements CommandLineInterface
         }
 
         if (!isset($option) || $option === self::GENERATE_KEY_CHOOSE) {
+            print('----------------- PUBLIC KEY -------------------' . PHP_EOL);
             print($this->fileHelper->getPublicKeyContent() . PHP_EOL);
+            print('----------------- PRIVATE KEY -------------------' . PHP_EOL);
             print($this->fileHelper->getPrivateKeyContent() . PHP_EOL);
         } else {
             print('You\'re using a custom pair of keys');

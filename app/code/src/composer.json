@@ -1,8 +1,8 @@
 {
-  "name": "dauer/openssl-cli-implementation",
+  "name": "dauer/rsa-cli-implementation",
   "minimum-stability": "dev",
   "type": "library",
-  "description": "Modules PHP for openssl implementation with cli",
+  "description": "Modules PHP for rsa implementation with cli",
   "homepage": "https://github.com/GDauer",
   "authors": [
     {

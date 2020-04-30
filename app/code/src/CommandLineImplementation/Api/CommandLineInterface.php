@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Dauer\CommandLineImplementation\Api;
 
-use Dauer\OpenSecureSocketsLayer\Exception\CouldNotDecryptException;
-use Dauer\OpenSecureSocketsLayer\Exception\CouldNotEncryptException;
-use Dauer\OpenSecureSocketsLayer\Exception\InvalidKeyGenerationException;
+use Dauer\SecureLayerCrypt\Exception\CouldNotDecryptException;
+use Dauer\SecureLayerCrypt\Exception\CouldNotEncryptException;
+use Dauer\SecureLayerCrypt\Exception\InvalidKeyGenerationException;
 
 /**
  * Interface CommandLineInterface
@@ -19,7 +19,7 @@ interface CommandLineInterface
 {
 
     public const CLI_INITIAL_MESSAGE = <<<CLIM
-Welcome to my Command Line Interface script for openSSL implementation.
+Welcome to my Command Line Interface script for RSA implementation.
 This is a simple script for academic and study purpose.
 In this script you can:
 (1) - Generate a pair of key for Encrypt and Decrypt purpose

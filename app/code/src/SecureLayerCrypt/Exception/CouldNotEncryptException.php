@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Dauer\OpenSecureSocketsLayer\Exception;
+namespace Dauer\SecureLayerCrypt\Exception;
 
 /**
  * Class CouldNotEncryptException
  *
  * @category PHP
- * @package  Dauer\OpenSecureSocketsLayer\Exception
+ * @package  Dauer\SecureLayerCrypt\Exception
  * @author   Gustavo Dauer <gustavo.dauer@webjump.com.br>
  */
 class CouldNotEncryptException extends \Exception

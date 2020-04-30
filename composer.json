@@ -7,7 +7,7 @@
         }
     ],
     "require": {
-        "ext-openssl": "*"
+      "ext-readline": "*"
     },
     "autoload": {
         "psr-4": {
